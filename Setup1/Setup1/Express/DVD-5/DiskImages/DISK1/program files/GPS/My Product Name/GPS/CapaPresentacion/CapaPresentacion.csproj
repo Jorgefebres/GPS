@@ -1,0 +1,793 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D825383D-EE45-4C61-B336-1F3493317E64}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CapaPresentacion</RootNamespace>
+    <AssemblyName>CapaPresentacion</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.7.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery.UI.Combined">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.UI.Combined.1.8.20\lib\net45\AspNet.ScriptManager.jQuery.UI.Combined.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax, Version=4.5.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.4.5.6\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms, Version=4.5.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.4.5.6\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.1\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.0.3.12153\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Membership.OpenAuth, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Membership.OpenAuth.1.0.0\lib\net45\Microsoft.AspNet.Membership.OpenAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.0.0\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\OpenAuthProviders.ascx" />
+    <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="Account\Registro.aspx" />
+    <Content Include="Account\Sesion.aspx" />
+    <Content Include="Administrador\AgregarStockProducto.aspx" />
+    <Content Include="Administrador\Clientes.aspx" />
+    <Content Include="Administrador\ClientesTodos.aspx" />
+    <Content Include="Administrador\EmpleadosTodos.aspx" />
+    <Content Include="Administrador\Index.aspx" />
+    <Content Include="Administrador\Pagos.aspx" />
+    <Content Include="Administrador\Productos.aspx" />
+    <Content Include="Administrador\ProductosTodos.aspx" />
+    <Content Include="Administrador\Proveedores.aspx" />
+    <Content Include="Administrador\ProveedoresTodos.aspx" />
+    <Content Include="Administrador\Servicios.aspx" />
+    <Content Include="Administrador\ServiciosTodos.aspx" />
+    <Content Include="Administrador\VentaProductos.aspx" />
+    <Content Include="Administrador\Ventas.aspx" />
+    <Content Include="Administrador\VentaServicios.aspx" />
+    <Content Include="Cliente\Index.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Images\0.png" />
+    <Content Include="Images\1.png" />
+    <Content Include="Images\2.png" />
+    <Content Include="Images\3.png" />
+    <Content Include="Images\4.png" />
+    <Content Include="Images\5.png" />
+    <Content Include="Images\6.png" />
+    <Content Include="Images\7.png" />
+    <Content Include="Images\8.png" />
+    <Content Include="Images\9.png" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\actividades.gif" />
+    <Content Include="Images\actualizar.jpg" />
+    <Content Include="Images\addcliente.jpg" />
+    <Content Include="Images\agrega.png" />
+    <Content Include="Images\agregar.png" />
+    <Content Include="Images\agregar_producto.png" />
+    <Content Include="Images\ajaxloadingbar.gif" />
+    <Content Include="Images\almacen.jpg" />
+    <Content Include="Images\Almacen1.jpg" />
+    <Content Include="Images\almacenes.jpg" />
+    <Content Include="Images\almacen_final.jpg" />
+    <Content Include="Images\backup.png" />
+    <Content Include="Images\bg_header2.gif" />
+    <Content Include="Images\bio.jpg" />
+    <Content Include="Images\boletas_mov.jpg" />
+    <Content Include="Images\boletas_movimiento.png" />
+    <Content Include="Images\bottom_arrow.gif" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\buscar.gif" />
+    <Content Include="Images\Caja.jpg" />
+    <Content Include="Images\Caja1.jpg" />
+    <Content Include="Images\calcular.gif" />
+    <Content Include="Images\calendario.jpg" />
+    <Content Include="Images\cambios.jpg" />
+    <Content Include="Images\Cancel.jpg" />
+    <Content Include="Images\cancelar.gif" />
+    <Content Include="Images\cart.jpg" />
+    <Content Include="Images\casa.png" />
+    <Content Include="Images\casa1.png" />
+    <Content Include="Images\casa2.jpg" />
+    <Content Include="Images\categorias.png" />
+    <Content Include="Images\cerrar.gif" />
+    <Content Include="Images\check.png" />
+    <Content Include="Images\clientes.jpg" />
+    <Content Include="Images\clientes.png" />
+    <Content Include="Images\Close.jpg" />
+    <Content Include="Images\cobrando.png" />
+    <Content Include="Images\cobros.jpg" />
+    <Content Include="Images\comparar.png" />
+    <Content Include="Images\compras.jpg" />
+    <Content Include="Images\compras1.jpg" />
+    <Content Include="Images\compras2.jpg" />
+    <Content Include="Images\conductor.jpg" />
+    <Content Include="Images\consolidado.png" />
+    <Content Include="Images\conta.png" />
+    <Content Include="Images\contab.png" />
+    <Content Include="Images\CONTRASEnA.gif" />
+    <Content Include="Images\delivery.jpg" />
+    <Content Include="Images\descargar.png" />
+    <Content Include="Images\dos.jpg" />
+    <Content Include="Images\editar.png" />
+    <Content Include="Images\editar0.png" />
+    <Content Include="Images\Editar1.png" />
+    <Content Include="Images\elimina.png" />
+    <Content Include="Images\eliminar.gif" />
+    <Content Include="Images\eliminar.jpg" />
+    <Content Include="Images\eliminar.png" />
+    <Content Include="Images\eliminar1.jpg" />
+    <Content Include="Images\email.png" />
+    <Content Include="Images\empleado.png" />
+    <Content Include="Images\empleados.png" />
+    <Content Include="Images\entregado.jpg" />
+    <Content Include="Images\estado_productos.png" />
+    <Content Include="Images\excel.png" />
+    <Content Include="Images\facturando.png" />
+    <Content Include="Images\facturar.png" />
+    <Content Include="Images\fecha_vencimiento.jpg" />
+    <Content Include="Images\finanzas_final.jpg" />
+    <Content Include="Images\Fondo-Visual.jpg" />
+    <Content Include="Images\footer_bg.gif" />
+    <Content Include="Images\formulacion.jpg" />
+    <Content Include="Images\gastos.jpg" />
+    <Content Include="Images\grabar.gif" />
+    <Content Include="Images\guardar.png" />
+    <Content Include="Images\guardar_peque.png" />
+    <Content Include="Images\header_bg.gif" />
+    <Content Include="Images\header_bg_2.gif" />
+    <Content Include="Images\header_text_bg.gif" />
+    <Content Include="Images\header_text_img_1.gif" />
+    <Content Include="Images\header_text_img_2.gif" />
+    <Content Include="Images\header_text_img_3.gif" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\imageToMP.jpg" />
+    <Content Include="Images\impresora_matricial.jpg" />
+    <Content Include="Images\impresora_mini.png" />
+    <Content Include="Images\imprimiar.gif" />
+    <Content Include="Images\imprimir3.jpg" />
+    <Content Include="Images\imprimir3_mini.jpg" />
+    <Content Include="Images\INGREASAR.gif" />
+    <Content Include="Images\ingresos.jpg" />
+    <Content Include="Images\inicio.png" />
+    <Content Include="Images\inicio1.jpg" />
+    <Content Include="Images\init.png" />
+    <Content Include="Images\insumos.jpg" />
+    <Content Include="Images\inventario.jpg" />
+    <Content Include="Images\launch_project.gif" />
+    <Content Include="Images\lector.jpg" />
+    <Content Include="Images\lector_mini.jpg" />
+    <Content Include="Images\letras.jpg" />
+    <Content Include="Images\letras_credito.png" />
+    <Content Include="Images\listar.jpg" />
+    <Content Include="Images\lista_servicios_pendientes.png" />
+    <Content Include="Images\logo.gif" />
+    <Content Include="Images\LogoUsuario.jpg" />
+    <Content Include="Images\lupa.jpg" />
+    <Content Include="Images\marcarEntregadoPendiente.jpg" />
+    <Content Include="Images\marketing.jpg" />
+    <Content Include="Images\modificar.gif" />
+    <Content Include="Images\mostrar.png" />
+    <Content Include="Images\motivos.jpg" />
+    <Content Include="Images\new.jpg" />
+    <Content Include="Images\notas_credito.jpg" />
+    <Content Include="Images\nuevo.GIF" />
+    <Content Include="Images\nuevo.png" />
+    <Content Include="Images\nuevo_cliente.jpg" />
+    <Content Include="Images\opciones.jpg" />
+    <Content Include="Images\orden.jpg" />
+    <Content Include="Images\OrdenCompra.jpg" />
+    <Content Include="Images\orden_compra.jpg" />
+    <Content Include="Images\orden_salida.jpg" />
+    <Content Include="Images\pagos.jpg" />
+    <Content Include="Images\pdf.png" />
+    <Content Include="Images\pedidos.png" />
+    <Content Include="Images\pendiente.jpg" />
+    <Content Include="Images\precio_productos.png" />
+    <Content Include="Images\produccion.jpg" />
+    <Content Include="Images\produccion.png" />
+    <Content Include="Images\producto.png" />
+    <Content Include="Images\productos.png" />
+    <Content Include="Images\proveedores.jpg" />
+    <Content Include="Images\read_more.gif" />
+    <Content Include="Images\read_more_top.gif" />
+    <Content Include="Images\realizar_fumigacion.jpg" />
+    <Content Include="Images\reportes.jpg" />
+    <Content Include="Images\reportes.png" />
+    <Content Include="Images\rep_clientes.jpg" />
+    <Content Include="Images\sales-report.jpg" />
+    <Content Include="Images\scan.jpg" />
+    <Content Include="Images\seguimiento.png" />
+    <Content Include="Images\seguimiento_pagos.jpg" />
+    <Content Include="Images\send.gif" />
+    <Content Include="Images\serv_1.jpg" />
+    <Content Include="Images\serv_2.jpg" />
+    <Content Include="Images\serv_3.jpg" />
+    <Content Include="Images\slider_bg.gif" />
+    <Content Include="Images\spacer.gif" />
+    <Content Include="Images\starprinter.jpg" />
+    <Content Include="Images\tipo_clientes.jpg" />
+    <Content Include="Images\tipo_productos.png" />
+    <Content Include="Images\tipo_proveedor.jpg" />
+    <Content Include="Images\tipo_servicio.png" />
+    <Content Include="Images\top_arrow.gif" />
+    <Content Include="Images\transporte.png" />
+    <Content Include="Images\tres.jpg" />
+    <Content Include="Images\twitter.gif" />
+    <Content Include="Images\twitter.png" />
+    <Content Include="Images\ubicaciones.jpeg" />
+    <Content Include="Images\ul_li_Featu.gif" />
+    <Content Include="Images\unidad.jpg" />
+    <Content Include="Images\unidades.jpg" />
+    <Content Include="Images\uno.jpg" />
+    <Content Include="Images\usuario.gif" />
+    <Content Include="Images\vencido.jpg" />
+    <Content Include="Images\vencimiento.jpg" />
+    <Content Include="Images\ventas.jpg" />
+    <Content Include="Images\ventas_boleta.gif" />
+    <Content Include="Images\ventas_factura.jpg" />
+    <Content Include="Images\ventas_final.jpg" />
+    <Content Include="Images\VER.gif" />
+    <Content Include="Images\view_all.gif" />
+    <Content Include="Images\winrar.png" />
+    <Content Include="Images\youtube.png" />
+    <Content Include="packages.config" />
+    <Content Include="Administrador\Administrar.Master" />
+    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Products.aspx" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Services.aspx" />
+    <Content Include="Vendedor\AgregarStockProducto.aspx" />
+    <Content Include="Vendedor\Clientes.aspx" />
+    <Content Include="Vendedor\ClientesTodos.aspx" />
+    <Content Include="Vendedor\Index.aspx" />
+    <Content Include="Vendedor\Pagos.aspx" />
+    <Content Include="Vendedor\Productos.aspx" />
+    <Content Include="Vendedor\ProductosTodos.aspx" />
+    <Content Include="Vendedor\Proveedores.aspx" />
+    <Content Include="Vendedor\ProveedoresTodos.aspx" />
+    <Content Include="Vendedor\Servicios.aspx" />
+    <Content Include="Vendedor\VentaProductos.aspx" />
+    <Content Include="Vendedor\Ventas.aspx" />
+    <Content Include="Vendedor\VentaServicios.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Registro.aspx.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Registro.aspx.designer.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Sesion.aspx.cs">
+      <DependentUpon>Sesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Sesion.aspx.designer.cs">
+      <DependentUpon>Sesion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Administrar.Master.cs">
+      <DependentUpon>Administrar.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\Administrar.Master.designer.cs">
+      <DependentUpon>Administrar.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\AgregarStockProducto.aspx.cs">
+      <DependentUpon>AgregarStockProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\AgregarStockProducto.aspx.designer.cs">
+      <DependentUpon>AgregarStockProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Clientes.aspx.cs">
+      <DependentUpon>Clientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\Clientes.aspx.designer.cs">
+      <DependentUpon>Clientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\ClientesTodos.aspx.cs">
+      <DependentUpon>ClientesTodos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\ClientesTodos.aspx.designer.cs">
+      <DependentUpon>ClientesTodos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\DetalleVenta.cs" />
+    <Compile Include="Administrador\EmpleadosTodos.aspx.cs">
+      <DependentUpon>EmpleadosTodos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\EmpleadosTodos.aspx.designer.cs">
+      <DependentUpon>EmpleadosTodos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Pagos.aspx.cs">
+      <DependentUpon>Pagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\Pagos.aspx.designer.cs">
+      <DependentUpon>Pagos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Productos.aspx.cs">
+      <DependentUpon>Productos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\Productos.aspx.designer.cs">
+      <DependentUpon>Productos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\ProductosTodos.aspx.cs">
+      <DependentUpon>ProductosTodos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\ProductosTodos.aspx.designer.cs">
+      <DependentUpon>ProductosTodos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Proveedores.aspx.cs">
+      <DependentUpon>Proveedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\Proveedores.aspx.designer.cs">
+      <DependentUpon>Proveedores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\ProveedoresTodos.aspx.cs">
+      <DependentUpon>ProveedoresTodos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\ProveedoresTodos.aspx.designer.cs">
+      <DependentUpon>ProveedoresTodos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Servicios.aspx.cs">
+      <DependentUpon>Servicios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\Servicios.aspx.designer.cs">
+      <DependentUpon>Servicios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\ServiciosTodos.aspx.cs">
+      <DependentUpon>ServiciosTodos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\ServiciosTodos.aspx.designer.cs">
+      <DependentUpon>ServiciosTodos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\VentaProductos.aspx.cs">
+      <DependentUpon>VentaProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\VentaProductos.aspx.designer.cs">
+      <DependentUpon>VentaProductos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Ventas.aspx.cs">
+      <DependentUpon>Ventas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\Ventas.aspx.designer.cs">
+      <DependentUpon>Ventas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\VentaServicios.aspx.cs">
+      <DependentUpon>VentaServicios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\VentaServicios.aspx.designer.cs">
+      <DependentUpon>VentaServicios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cliente\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Products.aspx.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products.aspx.designer.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services.aspx.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services.aspx.designer.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedor\AgregarStockProducto.aspx.cs">
+      <DependentUpon>AgregarStockProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendedor\AgregarStockProducto.aspx.designer.cs">
+      <DependentUpon>AgregarStockProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedor\Clientes.aspx.cs">
+      <DependentUpon>Clientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendedor\Clientes.aspx.designer.cs">
+      <DependentUpon>Clientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedor\ClientesTodos.aspx.cs">
+      <DependentUpon>ClientesTodos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendedor\ClientesTodos.aspx.designer.cs">
+      <DependentUpon>ClientesTodos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedor\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendedor\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedor\Pagos.aspx.cs">
+      <DependentUpon>Pagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendedor\Pagos.aspx.designer.cs">
+      <DependentUpon>Pagos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedor\Productos.aspx.cs">
+      <DependentUpon>Productos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendedor\Productos.aspx.designer.cs">
+      <DependentUpon>Productos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedor\ProductosTodos.aspx.cs">
+      <DependentUpon>ProductosTodos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendedor\ProductosTodos.aspx.designer.cs">
+      <DependentUpon>ProductosTodos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedor\Proveedores.aspx.cs">
+      <DependentUpon>Proveedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendedor\Proveedores.aspx.designer.cs">
+      <DependentUpon>Proveedores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedor\ProveedoresTodos.aspx.cs">
+      <DependentUpon>ProveedoresTodos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendedor\ProveedoresTodos.aspx.designer.cs">
+      <DependentUpon>ProveedoresTodos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedor\Servicios.aspx.cs">
+      <DependentUpon>Servicios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendedor\Servicios.aspx.designer.cs">
+      <DependentUpon>Servicios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedor\Vendedor.Master.cs">
+      <DependentUpon>Vendedor.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendedor\Vendedor.Master.designer.cs">
+      <DependentUpon>Vendedor.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedor\VentaProductos.aspx.cs">
+      <DependentUpon>VentaProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendedor\VentaProductos.aspx.designer.cs">
+      <DependentUpon>VentaProductos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedor\Ventas.aspx.cs">
+      <DependentUpon>Ventas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendedor\Ventas.aspx.designer.cs">
+      <DependentUpon>Ventas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedor\VentaServicios.aspx.cs">
+      <DependentUpon>VentaServicios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendedor\VentaServicios.aspx.designer.cs">
+      <DependentUpon>VentaServicios.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Vendedor\Vendedor.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
+      <Project>{7c0ea691-8b10-4c2e-9946-77944238a281}</Project>
+      <Name>CapaNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1182/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

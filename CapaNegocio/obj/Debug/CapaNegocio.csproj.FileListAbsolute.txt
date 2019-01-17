@@ -1,0 +1,35 @@
+C:\Users\HernánMartín\Desktop\Proyecto\AplicacionEmpresa\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\Users\HernánMartín\Desktop\Proyecto\AplicacionEmpresa\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\Users\HernánMartín\Desktop\Proyecto\AplicacionEmpresa\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\Users\HernánMartín\Desktop\Proyecto\AplicacionEmpresa\CapaNegocio\bin\Debug\CapaDatos.pdb
+C:\Users\HernánMartín\Desktop\Proyecto\AplicacionEmpresa\CapaNegocio\obj\Debug\CapaNegocio.csprojResolveAssemblyReference.cache
+C:\Users\HernánMartín\Desktop\Proyecto\AplicacionEmpresa\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\Users\HernánMartín\Desktop\Proyecto\AplicacionEmpresa\CapaNegocio\obj\Debug\CapaNegocio.pdb
+C:\Users\Jor El\Desktop\AplicacionEmpresa\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\Users\Jor El\Desktop\AplicacionEmpresa\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\Users\Jor El\Desktop\AplicacionEmpresa\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\Users\Jor El\Desktop\AplicacionEmpresa\CapaNegocio\bin\Debug\CapaDatos.pdb
+C:\Users\Jor El\Desktop\AplicacionEmpresa\CapaNegocio\obj\Debug\CapaNegocio.csprojResolveAssemblyReference.cache
+C:\Users\Jor El\Desktop\AplicacionEmpresa\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\Users\Jor El\Desktop\AplicacionEmpresa\CapaNegocio\obj\Debug\CapaNegocio.pdb
+C:\Users\JorEl\Desktop\Proyectos\Visual Studio\GPS\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\Users\JorEl\Desktop\Proyectos\Visual Studio\GPS\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\Users\JorEl\Desktop\Proyectos\Visual Studio\GPS\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\Users\JorEl\Desktop\Proyectos\Visual Studio\GPS\CapaNegocio\bin\Debug\CapaDatos.pdb
+C:\Users\JorEl\Desktop\Proyectos\Visual Studio\GPS\CapaNegocio\obj\Debug\CapaNegocio.csprojResolveAssemblyReference.cache
+C:\Users\JorEl\Desktop\Proyectos\Visual Studio\GPS\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\Users\JorEl\Desktop\Proyectos\Visual Studio\GPS\CapaNegocio\obj\Debug\CapaNegocio.pdb
+C:\Users\pc\Desktop\GPS\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\Users\pc\Desktop\GPS\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\Users\pc\Desktop\GPS\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\Users\pc\Desktop\GPS\CapaNegocio\bin\Debug\CapaDatos.pdb
+C:\Users\pc\Desktop\GPS\CapaNegocio\obj\Debug\CapaNegocio.csprojResolveAssemblyReference.cache
+C:\Users\pc\Desktop\GPS\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\Users\pc\Desktop\GPS\CapaNegocio\obj\Debug\CapaNegocio.pdb
+C:\Users\witch\Desktop\GPS\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\Users\witch\Desktop\GPS\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\Users\witch\Desktop\GPS\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\Users\witch\Desktop\GPS\CapaNegocio\bin\Debug\CapaDatos.pdb
+C:\Users\witch\Desktop\GPS\CapaNegocio\obj\Debug\CapaNegocio.csprojResolveAssemblyReference.cache
+C:\Users\witch\Desktop\GPS\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\Users\witch\Desktop\GPS\CapaNegocio\obj\Debug\CapaNegocio.pdb

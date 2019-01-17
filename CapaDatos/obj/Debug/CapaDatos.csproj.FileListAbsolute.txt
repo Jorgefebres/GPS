@@ -1,0 +1,16 @@
+C:\Users\Jor El\Desktop\GPS\CapaDatos\obj\Debug\CapaDatos.csprojResolveAssemblyReference.cache
+C:\Users\JorEl\Desktop\Proyectos\Visual Studio\GPS\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\JorEl\Desktop\Proyectos\Visual Studio\GPS\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\JorEl\Desktop\Proyectos\Visual Studio\GPS\CapaDatos\obj\Debug\CapaDatos.csprojResolveAssemblyReference.cache
+C:\Users\JorEl\Desktop\Proyectos\Visual Studio\GPS\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\JorEl\Desktop\Proyectos\Visual Studio\GPS\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\pc\Desktop\GPS\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\pc\Desktop\GPS\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\pc\Desktop\GPS\CapaDatos\obj\Debug\CapaDatos.csprojResolveAssemblyReference.cache
+C:\Users\pc\Desktop\GPS\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\pc\Desktop\GPS\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\witch\Desktop\GPS\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\witch\Desktop\GPS\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\witch\Desktop\GPS\CapaDatos\obj\Debug\CapaDatos.csprojResolveAssemblyReference.cache
+C:\Users\witch\Desktop\GPS\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\witch\Desktop\GPS\CapaDatos\obj\Debug\CapaDatos.pdb

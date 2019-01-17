@@ -1,0 +1,121 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Administrar.master.cs" Inherits="CapaPresentacion.Administrador.Administrar" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title><%: Page.Title %> - Venta de productos y servicios GPS</title>
+    <asp:PlaceHolder ID="PlaceHolder1" runat="server">     
+          <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>  
+    <webopt:BundleReference ID="BundleReference1" runat="server" Path="~/Content/css" /> 
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+<body>
+    <form id="Form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+        <Scripts>
+            <%--Framework Scripts--%>
+            <asp:ScriptReference Name="MsAjaxBundle" />
+            <asp:ScriptReference Name="jquery" />
+            <asp:ScriptReference Name="jquery.ui.combined" />
+            <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+            <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+            <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+            <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+            <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+            <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+            <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+            <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+            <asp:ScriptReference Name="WebFormsBundle" />
+            <%--Site Scripts--%>
+
+        </Scripts>
+    </asp:ScriptManager>
+    <header>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p class="site-title">
+                    <a id="A1" runat="server" href="~/">su logotipo aquí</a>
+                </p>
+            </div>
+            <div class="float-right">
+                <section id="login">
+                    <asp:Label ID="Label8" runat="server" Text="Bienvenido: "></asp:Label>
+                    <asp:Label ID="lbluser" runat="server" CssClass="label"></asp:Label>
+                    <asp:HyperLink ID="btnCambiarPassword" runat="server" NavigateUrl="~/Account/Sesion.aspx">Cambiar contraseña</asp:HyperLink>
+                    <asp:HyperLink ID="btnCerrarSession" runat="server" NavigateUrl="~/Default.aspx">Cerrar sesión</asp:HyperLink>                    
+                </section>
+                <nav>
+                    <ul id="menu">
+                        <li class="error"><a id="A3" runat="server" href="~/Administrador/Index.aspx"><asp:Label ID="LabelInicio" runat="server" CssClass="label" Text="Inicio"></asp:Label></a></li>
+                       <!--<li><a id="A4" runat="server" href="~/Administrador/Empleados.aspx">
+                            <asp:Label ID="Label02" runat="server" Text="Label"></asp:Label></a></li>-->
+                        <!--<li><a id="A5" runat="server" href="~/Contact.aspx">Contacto</a></li>-->
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <section class="featured">
+            <br /><br />
+        <div class="content-wrapper">
+            <a><asp:ImageButton ID="ImageButton5" runat="server" AlternateText="PRODUCTOS" Height="90px" ImageAlign="Middle" ImageUrl="~/Images/productos.png" ToolTip="Administrar Productos" Width="100px" CssClass="asc" PostBackUrl="~/Administrador/Productos.aspx" /></a> - 
+                <a><asp:ImageButton ID="ImageButton8" runat="server" Height="90px" ImageAlign="Middle" ImageUrl="~/Images/empleados.png" Width="100px" PostBackUrl="~/Administrador/Clientes.aspx" ToolTip="Administración de Usuarios" /></a> - 
+                <a><asp:ImageButton ID="ImageButton9" runat="server" Height="90px" ImageAlign="Middle" ImageUrl="~/Images/almacen1.jpg" Width="100px" PostBackUrl="~/Administrador/Proveedores.aspx" ToolTip="Administración de Proveedores" /></a> -
+                <a><asp:ImageButton ID="ImageButton10" runat="server" Height="90px" ImageAlign="Middle" ImageUrl="~/Images/ventas.jpg" Width="100px" PostBackUrl="~/Administrador/Ventas.aspx" ToolTip="Realizar Ventas" /></a>- 
+                <a><asp:ImageButton ID="ImageButton11" runat="server" Height="90px" ImageAlign="Middle" ImageUrl="~/Images/pagos.jpg" Width="110px" PostBackUrl="~/Administrador/Pagos.aspx" ToolTip="Registrar Pago" /></a> - 
+                <a><asp:ImageButton ID="ImageButton12" runat="server" Height="90px" ImageAlign="Middle" ImageUrl="~/Images/rep_clientes.jpg" Width="100px" PostBackUrl="~/Administrador/Servicios.aspx" ToolTip="Administración de Servicios" /></a><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="Productos.aspx"><asp:Label ID="Label5" runat="server" Text="Productos" CssClass="label"></asp:Label></a><asp:Image ID="Image4" runat="server" ImageUrl="~/Images/header_text_bg.gif" Width="45px"></asp:Image>
+                <a href="Clientes.aspx"><asp:Label ID="Label9" runat="server" Text="Label" CssClass="label">Usuarios</asp:Label></a> <asp:Image ID="Image7" runat="server" ImageUrl="~/Images/header_text_bg.gif" Width="50px"></asp:Image>
+                <a href="Proveedores.aspx"><asp:Label ID="Label10" runat="server" Text="Label" CssClass="label">Proveedores</asp:Label></a> <asp:Image ID="Image8" runat="server" ImageUrl="~/Images/header_text_bg.gif" Width="50px"></asp:Image>
+                <a href="Ventas.aspx"><asp:Label ID="Label11" runat="server" Text="Label" CssClass="label">Ventas</asp:Label></a> <asp:Image ID="Image9" runat="server" ImageUrl="~/Images/header_text_bg.gif" Width="70px"></asp:Image>
+                <a href="Pagos.aspx"><asp:Label ID="Label12" runat="server" Text="Pagos" CssClass="label"></asp:Label></a> <asp:Image ID="Image10" runat="server" ImageUrl="~/Images/header_text_bg.gif" Width="75px"></asp:Image>
+                <a href="Servicios.aspx"><asp:Label ID="Label13" runat="server" Text="Label" CssClass="label">Servicios</asp:Label></a> 
+                </div>
+            </section>
+        <!--<div class="float-right">
+            <section id="opcion">
+                <center>
+                <a><asp:ImageButton ID="ImageButton1" runat="server" AlternateText="PRODUCTOS" Height="100px" ImageAlign="Middle" ImageUrl="~/Images/productos.png" ToolTip="Administrar Productos" Width="100px" CssClass="asc" PostBackUrl="~/Administrador/Productos.aspx" /></a> - 
+                <a><asp:ImageButton ID="ImageButton2" runat="server" Height="100px" ImageAlign="Middle" ImageUrl="~/Images/empleados.png" Width="100px" PostBackUrl="~/Administrador/Clientes.aspx" ToolTip="Administración de Usuarios" /></a> - 
+                <a><asp:ImageButton ID="ImageButton3" runat="server" Height="100px" ImageAlign="Middle" ImageUrl="~/Images/almacen_final2.jpg" Width="100px" PostBackUrl="~/Administrador/Proveedores.aspx" ToolTip="Administración de Proveedores" /></a> - 
+                <a><asp:ImageButton ID="ImageButton4" runat="server" Height="100px" ImageAlign="Middle" ImageUrl="~/Images/ventas.jpg" Width="100px" PostBackUrl="~/Administrador/Ventas.aspx" ToolTip="Realizar Ventas" /></a>&nbsp;- 
+                <a><asp:ImageButton ID="ImageButton6" runat="server" Height="100px" ImageAlign="Middle" ImageUrl="~/Images/pagos.jpg" Width="110px" PostBackUrl="~/Administrador/Pagos.aspx" ToolTip="Registrar Pago" /></a> - 
+                <a><asp:ImageButton ID="ImageButton7" runat="server" Height="100px" ImageAlign="Middle" ImageUrl="~/Images/rep_clientes_servicios.jpg" Width="100px" PostBackUrl="~/Administrador/Servicios.aspx" ToolTip="Administración de Servicios" /></a><br />
+                <a href="Productos.aspx"><asp:Label ID="Label1" runat="server" Text="Productos" CssClass="label"></asp:Label></a><asp:Image ID="Image1" runat="server" ImageUrl="~/Images/header_text_bg.gif" Width="45px"></asp:Image>
+                <a href="Clientes.aspx"><asp:Label ID="Label2" runat="server" Text="Label" CssClass="label">Usuarios</asp:Label></a> <asp:Image ID="Image2" runat="server" ImageUrl="~/Images/header_text_bg.gif" Width="50px"></asp:Image>
+                <a href="Proveedores.aspx"><asp:Label ID="Label3" runat="server" Text="Label" CssClass="label">Proveedores</asp:Label></a> <asp:Image ID="Image3" runat="server" ImageUrl="~/Images/header_text_bg.gif" Width="50px"></asp:Image>
+                <a href="Ventas.aspx"><asp:Label ID="Label4" runat="server" Text="Label" CssClass="label">Ventas</asp:Label></a> <asp:Image ID="Image5" runat="server" ImageUrl="~/Images/header_text_bg.gif" Width="70px"></asp:Image>
+                <a href="Pagos.aspx"><asp:Label ID="Label6" runat="server" Text="Pagos" CssClass="label"></asp:Label></a> <asp:Image ID="Image6" runat="server" ImageUrl="~/Images/header_text_bg.gif" Width="75px"></asp:Image>
+                <a href="Servicios.aspx"><asp:Label ID="Label7" runat="server" Text="Label" CssClass="label">Servicios</asp:Label></a> 
+                <br />
+            </center>
+            </section>
+        </div>-->
+    </header>
+    <div id="body">
+        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" >
+            <img class="float-left" src="../Images/heroAccent.png" />
+        </asp:ContentPlaceHolder>
+        <section class="content-wrapper main-content clear-fix">
+            <asp:ContentPlaceHolder runat="server" ID="MainContent" >
+            
+            </asp:ContentPlaceHolder>            
+        </section>
+    </div>
+    <footer>
+        <div class="content-wrapper">
+            <div class="float-left">
+                    Jor-El
+                    &copy; <%: DateTime.Now.Year %> Geortronics Application
+                </div>
+        </div>
+    </footer>
+    </form>
+</body>
+</html>
